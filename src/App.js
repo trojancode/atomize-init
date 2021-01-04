@@ -9,8 +9,20 @@ const debug = new DebugEngine();
 const engine = new Styletron();
 
 const theme = {
+  textSize: {
+    size: {
+      buttomText: "14px"
+    },
+    height: {
+      buttomText: "0px"
+    }
+  },
+  fontFamily: {
+    primary: 'Poppins, sans-serif',
+  },
   colors: {
-    black900: "#1d1d1e"
+    black900: "#1d1d1e",
+    disabled: "#000000"
   }
 };
 
