@@ -1,1 +1,1 @@
-export const API = "http://localhost/mini_project/api"
+export const API = process.env.REACT_APP_API

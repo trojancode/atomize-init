@@ -11,10 +11,16 @@ const engine = new Styletron();
 const theme = {
   textSize: {
     size: {
-      buttomText: "14px"
+      buttomText: "14px",
+      titleCaption:"55px",
+      subtitle:"30px",
+      para:"24px"
     },
     height: {
-      buttomText: "0px"
+      buttomText: "0px",
+      titleCaption:"55px",
+      subtitle:"30px",
+      para:"24px"
     }
   },
   fontFamily: {
@@ -22,7 +28,10 @@ const theme = {
   },
   colors: {
     black900: "#1d1d1e",
-    disabled: "#000000"
+    disabled: "#000000",
+    lightblue:"#E0F2FF",
+    lightGreen:"#ECF8E8",
+    mainBg:"linear-gradient(0deg, rgba(224,242,255,1) 0%, rgba(255,255,255,1) 100%)"
   }
 };
 

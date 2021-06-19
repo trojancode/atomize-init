@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Div, Icon, Button, Container, Notification, Text, Input } from "atomize";
 import { Link, Redirect } from 'react-router-dom';
-import DashboardLayout from '../components/DashboardLayout';
 import { authenticate, isAuthenticated, signin } from '../core';
 
 const Login = () => {
@@ -20,11 +19,6 @@ const Login = () => {
     const { loading, error, redirectToReferrer } = values;
     const { user } = isAuthenticated();
 
-    useEffect(() => {
-
-    })
-
-
     const handleChange = name => event => {
         setData({
             ...data,
@@ -35,13 +29,9 @@ const Login = () => {
     const redirectuser = () => {
         if (redirectToReferrer) {
             if (user && user.role === "0") {
-                return <Redirect to='/admin/dashboard'></Redirect>
-            } else if (user && user.role === "1") {
-                return <Redirect to='/teacher/dashboard'></Redirect>
-            }else if (user && user.role === "2") {
-                return <Redirect to='/student/dashboard'></Redirect>
-            } else {
                 return <Redirect to='/'></Redirect>
+            } else {
+                return <Redirect to='/login'></Redirect>
             }
         }
 
@@ -97,13 +87,13 @@ const Login = () => {
             {redirectuser()}
             {showError()}
             <br /><br /><br />
-            <Text textAlign="center" textSize="display1" tag="h4">DMS</Text><br />
+            <Text textAlign="center" textSize="display1" tag="h4">Stocks</Text><br />
             <Div m={{ xs: "20px", md: "auto" }} bg="white" shadow="5" rounded="xl" p="20px" maxW={{ xs: "auto", md: "350px" }}>
                 <Text textAlign="center" textSize="heading" m={{ b: "1rem" }}>
-                    Sign In
+                    Login In
         </Text>
                 <Input
-                    placeholder="Email"
+                    placeholder="username"
                     p={{ x: "2.5rem" }}
                     m={{ b: "1rem" }}
                     prefix={
@@ -118,7 +108,7 @@ const Login = () => {
                             transform="translateY(-50%)"
                         />
                     }
-                    onChange={handleChange('email')}
+                    onChange={handleChange('username')}
                 />
                 <Input
                     placeholder="Password"

@@ -40,3 +40,15 @@ tr:hover {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.dropdownitem:hover{
+    background-color: #ECF8E8;
+    /* border-bottom: 1px solid #c9ced6; */
+}
+.dropdownitem:not(:last-child) {
+    border-bottom: 1px solid #c9ced6;
+  }
+
+.stockDetailsItem:nth-child(even){
+    background-color: #ECF8E8;
+}
